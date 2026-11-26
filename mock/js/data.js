@@ -117,7 +117,7 @@ window.MOCK = {
     color: "#5B6EC2",
     phone: "+7 778 215 35 57",
     photo: "assets/avatar/me.jpg",
-    canStaff: true,
+    canStaff: false,
     /** Куратордың Google Drive аккаунты — топ Excel-дері осы жерге түседі */
     driveEmail: "diana.i4u@gmail.com",
   },

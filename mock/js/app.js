@@ -10859,6 +10859,8 @@ ${f(`S<sub>n</sub> = ${frac("a<sub>1</sub> + a<sub>n</sub>", "2")} · n`)}
     if (q.get("embed") === "1" || q.get("embed") === "true") {
       document.documentElement.classList.add("embed");
       document.body.classList.add("embed");
+      // оқушы гиді: staff / админ-панель жоқ
+      if (state.mode !== "student") setMode("student");
     }
     const open = (q.get("open") || q.get("screen") || "").toLowerCase();
     if (!open) return;
