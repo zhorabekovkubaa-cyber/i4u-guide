@@ -5598,18 +5598,8 @@ ${f(`S<sub>n</sub> = ${frac("a<sub>1</sub> + a<sub>n</sub>", "2")} · n`)}
     const me = MOCK.me;
     const L = PROFILE_T[state.lang] || PROFILE_T.ru;
     const inStaff = state.mode === "staff";
-    const accent = inStaff ? "#5B6EC2" : "#8B5CF6";
-    const staffToggle = me.canStaff
-      ? `
-      <div class="menu-block">
-        ${menuRow({
-          iconName: inStaff ? "school" : "admin_panel_settings",
-          title: inStaff ? L.back : L.admin,
-          accent,
-          action: "toggleStaff",
-        })}
-      </div>`
-      : "";
+    // оқушы гидінде / макетте админ-панель жоқ — staff-қа осыдан кіруге болмайды
+    const staffToggle = "";
 
     const el = $("#screenOverlay");
     el.hidden = false;
