@@ -1641,11 +1641,11 @@
   function loadProbnik() {
     if (!probnikReady) {
       const v = ($('script[src*="js/app.js"]')?.src.split("?v=")[1]) || "1";
-      loadCss("https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css");
+      loadCss("vendor/katex/katex.min.css");
       probnikReady = Promise.all([
         loadScript(`js/probnik.js?v=${v}`),
-        loadScript("https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js")
-          .then(() => loadScript("https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"))
+        loadScript("vendor/katex/katex.min.js")
+          .then(() => loadScript("vendor/katex/auto-render.min.js"))
           .catch(() => null),
       ]);
     }
